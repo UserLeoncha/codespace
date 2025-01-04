@@ -2,10 +2,17 @@
 Leoncha's Website
 
 # I build this docker image to deploy my website
+## Windows
 ``` bash
 docker build -t website-container C:\\codespace
 docker run -v C:\\codespace:/home/leoncha/codespace --name mywebsite -p 5050:5050 -it website-container
 ```
+## Linux
+``` bash
+docker build -t website-container ~/codespace
+docker run -v ~/codespace:/home/leoncha/codespace --name mywebsite -p 5050:5050 -it website-container
+```
+
 # How to run it?
 ``` bash
 npm add -D vitepress
