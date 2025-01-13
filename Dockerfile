@@ -32,8 +32,8 @@ VOLUME ["/home/leoncha/codespace"]
 ENTRYPOINT ["/bin/bash"]
 
 # 
-RUN cd ~ \
-mkdir -p ~/esp \
-cd ~/esp \
-git clone -b v5.3.2 --recursive https://github.com/espressif/esp-idf.git
+#RUN cd ~ \
+#mkdir -p ~/esp \
+#cd ~/esp \
+#git clone -b v5.3.2 --recursive https://github.com/espressif/esp-idf.git
 #
