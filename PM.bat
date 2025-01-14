@@ -1,5 +1,12 @@
 @echo off
 
+REM Check if the required parameters are provided
+IF "%1"=="esp" (
+    ECHO Please provide the Docker image name.
+    ECHO Usage: PM.bat <image_name> <container_name>
+    EXIT /B 1
+)
+
 REM Function to build Docker image without tag
 ECHO Building Docker image without tag...
 powershell -Command "docker build -t %1 ."
