@@ -5,9 +5,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Update repository URLs and install required packages
 RUN apt-get update && \
-#    apt-get install -y gcc cmake golang git sudo clang && \
+    apt-get install -y git sudo && \
     # install the espressif toolchain
-#    apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0 && \
+    apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0 && \
     #apt-get install -y nodejs npm && \
     apt-get clean
 
@@ -31,9 +31,3 @@ VOLUME ["/home/leoncha/codespace"]
 # Set the entrypoint
 ENTRYPOINT ["/bin/bash"]
 
-# 
-#RUN cd ~ \
-#mkdir -p ~/esp \
-#cd ~/esp \
-#git clone -b v5.3.2 --recursive https://github.com/espressif/esp-idf.git
-#
