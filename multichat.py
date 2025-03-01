@@ -27,4 +27,8 @@ def chat(query, history):
     return result
  
 print(chat("地球的自转周期是多少？", history))
-print(chat("月球呢？", history))
+
+# while(1): 
+print("you use Kimi now!")
+user_input = input("Please enter something: ")
+print(chat(str(user_input), history))
